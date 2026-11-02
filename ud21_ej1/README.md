@@ -1,0 +1,3 @@
+¿cuál de las tres formas es la más cómoda si tuvieras que cambiar el color del título en 10 páginas? ¿Por qué se desaconseja la primera?
+
+La más comoda es la tercera forma debido a que queda el código más limpio sin varias cosas por en medio y solo tienes que crear un archivo a parte con las cosas que quieres y ya esta. Por otro lado desaconsejo la primera forma porque se ve todo más feo el código parece más desordenado.
