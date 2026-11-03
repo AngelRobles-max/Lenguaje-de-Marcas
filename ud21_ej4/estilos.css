@@ -1,0 +1,19 @@
+/* Parte A: selector de id (solo el h1) */
+#corp {
+    color: darkblue;
+}
+
+/* Parte A (corregido): el h2 usa una clase en lugar de repetir el id */
+.corp {
+    color: darkblue;
+}
+
+/* Parte B: selector de atributo - enlaces que tienen el atributo target */
+a[target] {
+    color: crimson;
+}
+
+/* Parte B: selector de atributo - párrafos que tienen el atributo class */
+p[class] {
+    background-color: lightyellow;
+}
