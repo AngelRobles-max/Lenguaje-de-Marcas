@@ -1,0 +1,26 @@
+/* Selector universal: fuente de toda la página */
+* {
+    font-family: Verdana, sans-serif;
+}
+
+/* Selectores de tipo */
+h1 {
+    color: darkred;
+    font-size: 36px;
+    text-align: center;
+}
+
+h2 {
+    color: darkgreen;
+}
+
+p {
+    text-align: justify;
+}
+
+/* PRUEBA DEL ORDEN DE LA REGLA UNIVERSAL:
+   Si pongo la regla * la primera o la última, el resultado NO cambia.
+   Motivo: la regla * solo define font-family y ninguna otra regla toca
+   esa propiedad, así que no hay choque entre reglas. Además, el selector *
+   es el menos específico de todos, así que aunque chocara con h1, h2 o p,
+   ganarían estos últimos sin importar el orden. */
