@@ -1,0 +1,27 @@
+/* 1. El <em> del <h1> en naranja (el <em> del <li> no cambia) */
+h1 em {
+    color: orange;
+}
+
+/* 2. Fondo gris claro solo para los <p> que están dentro de un <li> */
+li p {
+    background-color: lightgray;
+}
+
+/* 3. Borde izquierdo solo para los <p> dentro de .comentarios */
+.comentarios p {
+    border-left: 4px solid steelblue;
+}
+
+/* 4. Regla p.especial: afecta a los DOS <p> con class="especial"
+      (el de .comentarios y la nota final), pero NO al <span> */
+p.especial {
+    font-weight: bold;
+    color: darkgreen;
+}
+
+/* 5. Regla .especial: ahora sí afecta también al <span class="especial">.
+      (También afecta a los <p class="especial">, porque tienen esa clase.) */
+.especial {
+    background-color: yellow;
+}
