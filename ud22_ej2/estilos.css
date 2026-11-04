@@ -1,8 +1,3 @@
-/* 
-   Diferencia entre inside y outside:
-   - outside (por defecto): La viñeta queda fuera del bloque de texto, por lo que si el texto ocupa dos líneas, la segunda línea no se alinea debajo de la viñeta, sino que queda más a la izquierda.
-   - inside: La viñeta se coloca dentro del bloque, haciendo que todas las líneas del texto queden perfectamente alineadas a la misma altura.
-*/
 
 ul {
     list-style: url('img/icono.png') square;
