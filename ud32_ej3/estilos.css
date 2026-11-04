@@ -1,0 +1,63 @@
+body {
+  font-family: Georgia, serif;
+  margin: 20px;
+  line-height: 1.6;
+  width: 70%;
+}
+
+p::first-letter {
+  font-size: 2.2em;
+  color: crimson;
+  font-weight: bold;
+}
+
+p::first-line {
+  font-variant: small-caps;
+  font-weight: bold;
+}
+
+::selection {
+  background-color: #ffd54f;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+li::before {
+  content: "✔ ";
+  color: green;
+}
+
+a[target="_blank"]::after {
+  content: " ↗";
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: crimson;
+}
+
+[data-ayuda] {
+  position: relative;
+  color: blue;
+  border-bottom: 1px dotted blue;
+  cursor: help;
+}
+
+[data-ayuda]:hover::after {
+  content: attr(data-ayuda);
+  position: absolute;
+  left: 0;
+  top: 1.8em;
+  width: 220px;
+  padding: 6px;
+  background-color: #333333;
+  color: white;
+  font-size: 14px;
+  border-radius: 4px;
+}
