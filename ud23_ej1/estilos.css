@@ -1,0 +1,45 @@
+/* Estilos básicos sin conceptos avanzados */
+body {
+    background-color: #E68A6C;
+    font-family: serif;
+    margin: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+form {
+    width: 650px;
+    margin: 0 auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    border: 2px solid #FFFFFF;
+    padding: 6px 10px;
+    vertical-align: middle;
+}
+
+td.centro {
+    text-align: center;
+}
+
+td.etiqueta-vertical {
+    vertical-align: top;
+}
+
+input[type="text"].largo {
+    width: 80%;
+}
+
+textarea {
+    font-family: monospace;
+    font-size: 14px;
+}
