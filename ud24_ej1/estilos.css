@@ -1,0 +1,66 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 20px;
+}
+
+.pagina {
+    width: 800px;
+    margin: 0 auto; /* Centra el contenedor principal */
+    border: 2px solid #333333;
+    padding: 20px;
+    background-color: #ffffff;
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+}
+
+.cabecera {
+    background-color: #d1ecf1;
+    border: 1px solid #bee5eb;
+    text-align: center;
+    padding: 15px;
+}
+
+.contenido {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 15px;
+    /* Opción elegida: display flex para alinear las tarjetas en fila */
+    display: flex;
+    justify-content: space-between;
+}
+
+.pie {
+    background-color: #e2e3e5;
+    border: 1px solid #d6d8db;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px; /* Separa el pie del contenido */
+}
+
+
+.tarjeta {
+    width: 220px;
+    padding: 15px;
+    border: 1px solid #cccccc;
+    margin: 10px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+
+
+.etiqueta {
+    background-color: #ffc107;
+    color: #000000;
+    padding: 4px 8px;
+    border-radius: 4px;
+    /* Al cambiar a inline-block se aplican width, height y margin vertical */
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    margin: 10px 0;
+    text-align: center;
+    line-height: 40px;
+}
+
