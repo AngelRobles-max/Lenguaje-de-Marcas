@@ -1,0 +1,38 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 6px;
+  width: 250px;
+}
+
+input:focus {
+  background-color: #fff3b0;
+}
+
+input:required {
+  border-left: 4px solid red;
+}
+
+input[type="text"]:read-only {
+  background-color: #eeeeee;
+  color: gray;
+}
+
+
+input:disabled {
+  opacity: 0.4;
+}
+
+input:checked + label {
+  font-weight: bold;
+  color: green;
+}
+
+input:hover:focus {
+  background-color: #b3e5fc;
+}
