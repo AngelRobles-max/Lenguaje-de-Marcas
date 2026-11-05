@@ -1,0 +1,211 @@
+/*
+  PARTE 1: AJUSTES GENERALES
+*/
+body {
+  margin: 0;                      /* Quita el margen por defecto del navegador */
+  background-color: #11111c;     
+  color: #eaeaf2;                
+  font-family: Arial, sans-serif;
+}
+
+/* El main se aparta 200px a la izquierda para que el menú fixed no lo tape.
+   Un elemento fixed sale del flujo, así que la página no "sabe" que está ahí. */
+main {
+  margin-left: 200px;
+}
+
+/*
+  PARTE 2: MENU LATERAL
+*/
+nav {
+  position: fixed;                /* Fijo respecto a la ventana: no se mueve al hacer scroll */
+  top: 0;                         /* top 0 y bottom 0 a la vez -> ocupa toda la altura */
+  bottom: 0;
+  left: 0;                        
+  width: 200px;
+  box-sizing: border-box;         /* El padding no suma al ancho: la caja mide justo 200px */
+  padding-top: 26px;
+  background-color: #07070d;
+}
+
+.logo {
+  margin: 0 0 28px;
+  padding-left: 20px;
+  color: #ff4f81;
+  font-weight: bold;
+  letter-spacing: 4px;            /* Separa las letras */
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;               /* Quita los puntos de la lista */
+}
+
+nav a {
+  display: block;                 /* Hace clicable todo el ancho, no solo el texto */
+  padding: 13px 20px;
+  color: #eaeaf2;
+  text-decoration: none;          /* Quita el subrayado de los enlaces */
+}
+
+nav a:hover {
+  color: #38e1d0;                 /* Cambia de color al pasar el ratón */
+}
+
+/*
+  PARTE 3: PORTADA
+*/
+header {
+  position: relative;             /* Referencia para colocar el div.portada con absolute */
+  height: 300px;
+  background-color: #2a1b4d;
+}
+
+/* absolute con bottom y left: se coloca a 30px del borde inferior e izquierdo del header */
+.portada {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+}
+
+.portada h1 {
+  margin: 0 0 6px;
+  color: #38e1d0;
+  font-size: 40px;
+}
+
+.portada p {
+  margin: 0;
+  font-size: 17px;
+}
+
+/*
+  PARTE 4: SECCIONES Y TITULOS H2
+*/
+section {
+  position: static;               /* Valor por defecto: lo declaro para dejarlo explícito */
+  margin-bottom: 18px;            /* Separación entre secciones */
+  padding-bottom: 20px;           /* Aire al final: evita que el margen del último hijo se escape y acorte la línea rosa */
+  border-left: 2px solid #ff4f81; 
+}
+
+/*
+  El h2 se queda pegado arriba mientras su sección sigue en pantalla. Al terminar la
+  sección, el siguiente h2 lo empuja y lo sustituye. Claves:
+  - top: 0 es obligatorio para que sticky funcione.
+  - background: sin fondo se vería pasar el texto por detrás.
+  - z-index: si no, los puntos de la línea de tiempo (absolute) se pintarían encima.
+  - margin-left: -2px hace que el h2 tape la línea rosa de la sección en su zona.
+*/
+section h2 {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  margin: 0 0 0 -2px;
+  padding: 18px 32px;
+  background-color: #11111c;
+  border-bottom: 2px solid #38e1d0;
+  color: #38e1d0;
+  font-size: 26px;
+}
+
+/*
+  PARTE 5: PROGRAMA Y LINEA DE TIEMPO
+  Se usan dos pseudoelementos ::before. Sin la propiedad content no se muestran nunca,
+  aunque esté vacía (content: "").
+*/
+.horario {
+  position: relative;             /* Referencia para la línea vertical (ul::before) */
+  margin: 0;
+  padding: 22px 0 30px;
+  list-style: none;
+}
+
+/* Línea vertical rosa: absolute dentro del ul, con top y bottom que fijan su largo */
+.horario::before {
+  content: "";
+  position: absolute;
+  left: 37px;
+  top: 24px;
+  bottom: 43px;
+  width: 2px;
+  background-color: #ff4f81;
+}
+
+.horario li {
+  position: relative;             /* Referencia para el punto de cada li */
+  padding: 11px 0 11px 58px;      /* El padding izquierdo deja sitio a la línea y al punto */
+  line-height: 22px;
+}
+
+
+.horario li::before {
+  content: "";
+  position: absolute;
+  left: 31px;
+  top: 15px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;             /* 50% convierte un cuadrado en círculo */
+  background-color: #38e1d0;
+}
+
+.horario strong {
+  margin-right: 4px;
+  color: #ff4f81;
+}
+
+/*
+  PARTE 6: ARTISTAS
+*/
+.cartel {
+  padding: 24px 28px 16px;
+}
+
+/* inline-block: se colocan en fila como palabras, saltan de línea al no caber
+   y aun así aceptan margin, padding y border. */
+.cartel span {
+  display: inline-block;
+  margin: 6px;
+  padding: 10px 20px;
+  border: 2px solid #ff4f81;
+  border-radius: 22px;            /* Bordes redondeados: forma de píldora */
+}
+
+.cartel span:first-child {
+  background-color: #ff4f81;      /* La primera destaca */
+  font-weight: bold;
+}
+
+/*
+  PARTE 7: INFO UTIL
+*/
+
+/* Altura fija con overflow: auto -> la caja no crece y aparece barra de scroll
+   solo cuando el contenido no cabe. */
+.faq {
+  height: 170px;
+  margin: 26px 30px 0 28px;
+  padding: 10px 16px;
+  overflow: auto;
+  border: 2px solid #38e1d0;
+  background-color: #181830;
+}
+
+.faq p {
+  margin: 0 0 12px;
+  line-height: 22px;
+}
+
+/*
+  PARTE 8: PIE DE PAGINA
+*/
+footer {
+  padding: 20px 30px;
+  background-color: #0a0a12;
+}
+
+footer p {
+  margin: 0;
+}

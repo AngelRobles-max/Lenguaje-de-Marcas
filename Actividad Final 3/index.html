@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es"> 
+<head>
+  <meta charset="UTF-8"> 
+  <title>Festival Mar Sonora</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <!--
+    PARTE 1: MENÚ LATERAL
+    Está FUERA de main a propósito: el nav se fija a la ventana (fixed) y
+    el main se aparta con un margen izquierdo para que el menú no lo tape.
+    Los enlaces internos (href con #id) hacen bajar hasta el elemento con ese id.
+  -->
+  <nav>
+    <p class="logo">MAR SONORA</p>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#programa">Programa</a></li>
+      <li><a href="#artistas">Artistas</a></li>
+      <li><a href="#info">Info útil</a></li>
+    </ul>
+  </nav>
+
+  <!-- main: contenido principal de la página (solo debe haber uno) -->
+  <main>
+
+    <!--
+      PARTE 2: PORTADA
+      El header#inicio es el bloque de color de 300px.
+      El div.portada (título y subtítulo) se coloca dentro con absolute,
+      por eso el header necesita position: relative.
+    -->
+    <header id="inicio">
+      <div class="portada">
+        <h1>Festival Mar Sonora</h1>
+        <p>14 y 15 de agosto · Playa de la Malvarrosa, Valencia</p>
+      </div>
+    </header>
+
+    <!--
+      PARTE 3: PROGRAMA
+      La línea de tiempo NO está en el HTML: la dibujan los ::before del CSS
+      (uno en el ul para la línea y otro en cada li para el punto).
+      strong pone la hora en negrita y le da importancia.
+    -->
+    <section id="programa">
+      <h2>Programa del sábado</h2>
+      <ul class="horario">
+        <li><strong>17:00</strong> Apertura de puertas y DJ de bienvenida</li>
+        <li><strong>18:00</strong> Los Faroles (pop-rock)</li>
+        <li><strong>19:15</strong> Marea Alta (indie)</li>
+        <li><strong>20:30</strong> Puesta de sol con Laia Verd (acústico)</li>
+        <li><strong>21:45</strong> Cabeza de cartel: Delta 66</li>
+        <li><strong>23:15</strong> Sesión electrónica de Nora K</li>
+        <li><strong>01:00</strong> Cierre y after en la arena</li>
+      </ul>
+    </section>
+
+    <!--
+      PARTE 4: ARTISTAS
+      Cada artista es un span (etiqueta en línea sin significado propio).
+      El CSS los convierte en píldoras con inline-block.
+    -->
+    <section id="artistas">
+      <h2>Artistas</h2>
+      <div class="cartel">
+        <span>Delta 66</span>
+        <span>Nora K</span>
+        <span>Marea Alta</span>
+        <span>Laia Verd</span>
+        <span>Los Faroles</span>
+        <span>DJ Brisa</span>
+        <span>Costa Norte</span>
+        <span>Las Gaviotas</span>
+      </div>
+    </section>
+
+    <!-- PARTE 5: INFO UTIL (la pregunta va en strong, la respuesta es texto normal) -->
+    <section id="info">
+      <h2>Info útil</h2>
+      <div class="faq">
+        <p><strong>¿Hay aparcamiento?</strong> Hay una zona habilitada, pero recomendamos ir en tranvía.</p>
+        <p><strong>¿Puedo entrar con comida?</strong> No, pero dentro del recinto hay food trucks para todos los gustos.</p>
+        <p><strong>¿Hay consigna?</strong> Sí, junto a la entrada principal, por 3 € la bolsa.</p>
+        <p><strong>¿Se puede pagar con tarjeta?</strong> Sí, todo el recinto funciona con pulsera sin efectivo.</p>
+        <p><strong>¿Edad mínima?</strong> Los menores de 16 años deben ir acompañados de un adulto.</p>
+        <p><strong>¿Y si llueve?</strong> El festival se celebra igualmente, salvo aviso por tormenta.</p>
+      </div>
+    </section>
+
+    <!-- PARTE 6: PIE DE PAGINA (dentro de main, según el enunciado). &copy; es el símbolo © -->
+    <footer>
+      <p>&copy; 2026.Ángel Robles Pérez.</p>
+    </footer>
+
+  </main>
+
+</body>
+</html>
