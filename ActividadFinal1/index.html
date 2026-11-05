@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="es"> 
+<head>
+ 
+  <meta charset="UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actividad Final 1 - HTML5/CSS3</title>
+  
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <!--
+    HEADER: cabecera de la página. Contiene los dos logos y los títulos.
+    Los logos van ANTES de los títulos porque en el CSS se colocan con float:
+    un elemento flotante solo se coloca bien si aparece antes del texto que rodea.
+  -->
+  <header>
+ 
+    <img class="logo-izq" src="img/html5.png" alt="Logo de HTML5">
+    <img class="logo-der" src="img/css3.png" alt="Logo de CSS3">
+    <h1>ACTIVIDAD</h1>
+    <h2>HTML5/CSS3 CURSO 24-25</h2>
+  </header>
+
+  <!--
+    NAV: bloque de navegación (menú). Se usan enlaces <a>.
+    href="#" significa "enlace vacío": sirve para maquetar cuando aún no hay otras páginas.
+  -->
+  <nav>
+    <a href="#">Ítem 1</a>
+    <a href="#">Ítem 2</a>
+    <a href="#">Ítem 3</a>
+    <a href="#">Ítem 4</a>
+    <a href="#">Ítem 5</a>
+  </nav>
+
+  <!--
+    SECTION: agrupa contenido relacionado. Las seis redes sociales tratan lo mismo,
+    así que van TODAS dentro de UNA sola section.
+    Cada red es un ARTICLE: contenido independiente que tendría sentido por sí solo.
+    IMPORTANTE: el ORDEN de los article importa, porque el CSS usa nth-child
+    (1º = Facebook, 2º = Twitter, 3º = YouTube, 4º = LinkedIn, 5º = Instagram, 6º = Pinterest).
+  -->
+  <section>
+
+    <article>
+      <img src="img/facebook.png" alt="Logo de Facebook">
+      <h3>Facebook</h3>
+      <p>Facebook, Inc. es una compañía estadounidense que ofrece servicios de redes sociales y medios sociales en línea con sede en Menlo Park, California.</p>
+    </article>
+
+    <article>
+      <img src="img/twitter.png" alt="Logo de Twitter">
+      <h3>Twitter</h3>
+      <p>Twitter es un servicio de microblogging, con sede en San Francisco, California, con filiales en San Antonio (Texas) y Boston (Massachusetts).</p>
+    </article>
+
+    <article>
+      <img src="img/youtube.png" alt="Logo de YouTube">
+      <h3>YouTube</h3>
+      <p>YouTube es un sitio web dedicado a compartir videos. Presenta una variedad de clips de películas, programas de televisión y vídeos musicales, videoblogs y más.</p>
+    </article>
+
+    <article>
+      <img src="img/linkedin.png" alt="Logo de LinkedIn">
+      <h3>LinkedIn</h3>
+      <p>LinkedIn es una comunidad social orientada a las empresas, a los negocios y el empleo. La web pone en contacto a millones de empresas y empleados.</p>
+    </article>
+
+    <article>
+      <img src="img/instagram.png" alt="Logo de Instagram">
+      <h3>Instagram</h3>
+      <p>Instagram es una red social y aplicación. Su función es subir fotos, vídeos. Está disponible para dispositivos Android e iOS. y actualmente pertenece a Facebook, Inc.</p>
+    </article>
+
+    <article>
+      <img src="img/pinterest.png" alt="Logo de Pinterest">
+      <h3>Pinterest</h3>
+      <p>Pinterest es una plataforma que permite a los usuarios crear y administrar, en tableros personales temáticos, colecciones de imágenes como eventos, intereses, hobbies y mucho más.</p>
+    </article>
+
+  </section>
+
+  <!--
+    FOOTER: pie de página. Aquí hay DOS franjas, por eso uso dos <div>:
+    una con los iconos y otra con el copyright.
+    <div> = caja genérica sin significado propio; se usa para agrupar y dar estilo.
+  -->
+  <footer>
+    <div class="iconos">
+      <!-- Las imágenes del footer también crecerán al pasar el ratón (regla "img:hover" del CSS) -->
+      <img src="img/facebook.png" alt="Facebook">
+      <img src="img/twitter.png" alt="Twitter">
+      <img src="img/youtube.png" alt="YouTube">
+      <img src="img/linkedin.png" alt="LinkedIn">
+      <img src="img/instagram.png" alt="Instagram">
+      <img src="img/pinterest.png" alt="Pinterest">
+    </div>
+    <div class="copyright">
+      <p>&copy;2025. Ángel Robles Pérez.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
